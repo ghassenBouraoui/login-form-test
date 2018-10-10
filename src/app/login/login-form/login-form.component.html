@@ -1,0 +1,41 @@
+<div class="form-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+  <div class="form-inputs">
+    <table>
+      <tr>
+        <td class="form-label">Email: </td>
+        <td>
+          <input type="text" formControlName="email">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+            <label *ngIf="email.errors.required">
+              L'email est obligatoire
+            </label>
+            <label *ngIf="email.errors.email">
+                L'email doit être valide.
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+          <td class="form-label">Mot de passe: </td>
+          <td>
+            <input type="password" formControlName="password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
+                <label *ngIf="password.errors.required">
+                  Le champs mot de passe est obligatoire
+                </label>
+                <label *ngIf="password.errors.minlength">
+                  Le mot de passe doit etre de longueur superieur ou egale à 8.
+                </label>
+              </div>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="submit-container">
+          <input type="submit" value="Connexion" [disabled]="!(email.valid && password.valid)">
+        </td>
+      </tr>
+    </table>
+  </div>
+  </form>
+</div>

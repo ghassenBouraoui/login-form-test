@@ -1,0 +1,19 @@
+.form-container {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+}
+
+.scrolling-box {
+  height: 40vh;
+  overflow-y: auto
+}
+
+.bottom-inputs {
+  padding: 5vh;
+}
+
+.bottom-inputs input[type="button"] {
+  float: right;
+}

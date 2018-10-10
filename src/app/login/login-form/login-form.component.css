@@ -1,0 +1,29 @@
+.form-container {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+}
+
+.form-container table {
+  width: 100%;
+}
+
+.form-label {
+  width: 15%;
+}
+
+.form-container table input {
+  width: 85%;
+  margin-top: 1%;
+}
+
+.form-container table input[type="submit"] {
+  width: auto;
+  text-align: center;
+}
+
+.submit-container {
+  padding-top: 10%;
+  text-align: center
+}
