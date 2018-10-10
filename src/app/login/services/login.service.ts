@@ -13,7 +13,9 @@ export class LoginService {
   //On fait appel à une ressource de test qui verifie l'utilisateur et renvoie toujours un token
   loginUser(email: string, password: string): Observable<Object> {
     const body = { email: email, password: password };
-    console.log("Inscription en cours ...");
+	console.log("Email envoyé: "+email);
+	console.log("Mot de passe envoyé: "+email);
+    console.log("Connexion en cours ...");
     const response = this.http.post(
       ApiUri.Uri + '/register',
       body,
